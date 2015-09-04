@@ -3,10 +3,11 @@ $(function(){
     var subButtonClicked = false;
     var multButtonClicked = false;
     var divButtonClicked = false;
+    var expButtonClicked = false;
 
     $(".execute").click(function()
     {
-        var mathClicked = addButtonClicked + subButtonClicked + multButtonClicked +divButtonClicked;
+        var mathClicked = addButtonClicked + subButtonClicked + multButtonClicked +divButtonClicked + expButtonClicked;
         var operandInput1 = $(".operand1").val();
         var operandInput2 = $(".operand2").val();
 
@@ -86,6 +87,12 @@ $(function(){
                 $(".display").html(operandDivTotal);
                 $(".history").append(operandInput1 + "/" + operandInput2 + " = " + operandDivTotal + "&nbsp;&nbsp;&nbsp;");
             }
+            else if (expButtonClicked === true)
+            {
+                var operandExpTotal = Math.pow(operandInput1,operandInput2);
+                $(".display").html(operandExpTotal);
+                $(".history").append(operandInput1 + "^" + operandInput2 + " = " + operandExpTotal + "&nbsp;&nbsp;&nbsp;");
+            }
             // console.log(operandInput2);
             setAllToFalse();
          }
@@ -110,6 +117,10 @@ $(function(){
         setAllToFalse();
         divButtonClicked = true;
     });
+    $(".exponent-button").click(function(){
+        setAllToFalse();
+        expButtonClicked = true;
+    });
 
     function setAllToFalse()
     {
@@ -117,6 +128,7 @@ $(function(){
         subButtonClicked = false;
         multButtonClicked = false;
         divButtonClicked = false;
+        expButtonClicked = false;
     }
 
     console.log("test");  
