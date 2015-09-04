@@ -1,0 +1,48 @@
+.button-container{
+    /*display: inline-block;*/
+}
+
+body {
+    background-color: gray;
+}
+
+input{
+    display: inline-block;
+    size:1;
+}
+.content-container{
+    margin-top: 25%;
+    border: 5px solid #000;
+    height:100%;
+    background-color: white;
+}
+.history{
+    background-color: red;
+    height: 60%;
+}
+.history-display{
+    background-color: red;
+}
+
+.display {
+    height: 10%;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row1 {
+    background-color: red;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.execute {
+    background-color: purple;
+    font-size: 20px;
+    color: white;
+}
